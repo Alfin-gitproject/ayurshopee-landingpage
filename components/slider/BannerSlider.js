@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function BannerSlider() {
   return (
     <figure className="banner-image">
-      <Link href="/index-2">
+      <Link href="/">
         <Image
           src="/assets/images/banner/img-3.png"
           alt="Natural Face Bathing Bar Banner"
