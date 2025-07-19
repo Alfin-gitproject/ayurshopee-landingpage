@@ -99,9 +99,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                     </div>
                     {/* Header Upper */}
                     <div className="header-lower ">
-                        <div className="outer-container">
+                        <div className="outer-container py-3">
                             <div className="auto-container">
-                                <div className="outer-box">
+                                <div className="outer-box py-2">
                                     <div className="logo-box">
                                         <figure className="logo">
                                             {/* <Link href="/">
