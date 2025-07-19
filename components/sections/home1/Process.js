@@ -72,10 +72,10 @@ export default function Process() {
               <div className="inner-box bg-white my-3 mx-2">
                 <span className="count-text">05</span>
                 {/* <figure className="image-box"><img src="assets/images/resource/process-2.jpg" alt="" /></figure> */}
-                <div className="lower-content">
+                {/* <div className="lower-content">
                   <h3>Enjoy Prolonged Effects</h3>
                   <p>Stamen Cream's effects can last 2-3 hours, giving you an ample window to enjoy prolonged intimate play. </p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div  style={{minWidth:"300px"}} className="processing-block-one wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">

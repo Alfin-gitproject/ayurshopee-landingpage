@@ -96,7 +96,7 @@ const OTPRegister = ({ phone, name, shippingInfo, Quantity, closeModal }) => {
       //console.log(result);
       
       const accessToken = result.user.accessToken;
-      const password = otp + '@stamen';
+      const password = otp + '';
       const name = 'phone-logged-user';
       const email = `phoneloggeduser${otp+result?.user?.uid}@gmail.com`
       const phone = phoneNumber;

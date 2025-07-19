@@ -79,7 +79,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                                         <i className="icon-2"></i>Phone: <Link href="tel:+919738105105">+91 7034035102</Link>
                                     </li>
                                     <li>
-                                        <i className="icon-2"></i>Email: <a href="mailto:hello@inherbz.com">info@ayurshoppee.com</a>
+                                        <i className="icon-2"></i>Email: <a href="mailto:info@ayurshoppee.com">info@ayurshoppee.com</a>
                                     </li>
                                 </ul>
                                 <ul className="social-links clearfix">
@@ -128,7 +128,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                                             </Link>
                                             )}
                                             {!isCheckoutRoute && (
-                                            <Link href="/checkout" className="theme-btn btn-two mobile-hide">
+                                            <Link href="/" className="theme-btn btn-two mobile-hide">
                                                 <span>Order now</span>
                                             </Link>
                                             )}
@@ -173,7 +173,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                                 <div style={{ gap:'10px' }} className="d-flex btn-box">
                                     {(orders?.length > 0) && <Link href="/orders" className="card-link d-flex align-items-center text-white text-decoration-underline">My Orders</Link>}
                                     {!isCheckoutRoute && (
-                                            <Link href="/checkout" className="theme-btn btn-two mobile-hide">
+                                            <Link href="/" className="theme-btn btn-two mobile-hide">
                                                 <span>Order Now</span>
                                             </Link>
                                     )}

@@ -11,7 +11,7 @@ export default function transformUserDataToOrderSchema(localStorageData, userId,
       user: userId, 
       orderItems: [
         {
-          name: 'Stamen Cream',
+          name: '',
           quantity: quantity||1,
           image: `${process.env.NEXT_PUBLIC_URL}/assets/images/banner/banner-img-1.png`,
           price: '500',

@@ -45,10 +45,13 @@ export default function Footer1() {
               <div className="widget-content">
                 <ul className="info-list">
                   <li><img src="assets/images/icons/icon-1.png" alt="" />
-                    inherbz Health Care LLP PWD Road,
-                    Near SN Jn, Nettoor(P.0), Marad,
+                   Green Wellness Solutions
 
-                    Ernakulam-Cochin, Kerala-682040
+123 Sunshine Lane,
+
+Near Central Park, Springfield (P.O.),
+
+Rivertown, Kerala-680001
                   </li>
                 </ul>
               </div>

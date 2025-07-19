@@ -21,7 +21,7 @@ export default function Video() {
           </div> */}
           <h2>Discover Your Natural Glow<br />with Our Bathing Bar</h2>
           <div className="btn-box">
-            <Link href="/checkout" className="theme-btn btn-one"><span>Order now</span></Link>
+            <Link href="/" className="theme-btn btn-one"><span>Order now</span></Link>
           </div>
         </div>
       </div>

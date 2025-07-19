@@ -46,7 +46,7 @@ export default function CheckOut({ quantity, onQuantityChange }) {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">Stamen Cream</h5>
+                        <h5 className="card-title"></h5>
                         <div style={{ fontSize: '0.9em' }} className="card-text text-black">
                             <div className="d-flex align-items-center">
                                 <button className="btn btn-outline-secondary" onClick={decreaseQuantity}>-</button>

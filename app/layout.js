@@ -8,8 +8,8 @@ import "swiper/css/pagination"
 import 'swiper/css/free-mode';
 import { gotham } from '@/lib/font'
 export const metadata = {
-    title: 'inHerbz',
-    description: 'Stamen',
+    title: 'ayurshoppee',
+    description: 'natural',
 }
 
 export default function RootLayout({ children }) {
