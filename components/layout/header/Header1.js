@@ -161,7 +161,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                 {/* Sticky Header */}
                 <div className="sticky-header">
                     <div className="auto-container">
-                        <div className="outer-box">
+                        <div className="outer-box py-1">
                             {/* <div className="logo-box">
                                 <figure className="logo"><Link href="/"><img src="assets/images/logo.png" alt="" /></Link></figure>
                             </div> */}
