@@ -6,7 +6,7 @@ export default function BackToTop({ scroll }) {
     <>  
       <div className="scroll-to-top scroll-to-target d-block mb-3">
         <div style={{gap:'10px'}} className="d-flex flex-column">
-          <a className="" target="_blank" href="https://wa.me/+919738105105">
+          <a className="" target="_blank" href="https://wa.me/">
             <svg
               className="w-6 h-6"
               aria-hidden="true"

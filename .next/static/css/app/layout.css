@@ -32700,7 +32700,7 @@ button.ltr,
 
 :root{
   --theme-color: #f9f9f9;
-  --secondary-color: #e02232;
+  --secondary-color: #1f913e;
   --white-color:#fff;
   --pink-color: #FFC0CB;
   --violet-color: #fff;
@@ -33544,13 +33544,13 @@ a .theme-btn .btn-two{
 
 .main-header .header-lower .outer-box{
   position: relative;
-  background: #e11e2f;
+  background: #1f913e;
 }
 
 .main-header .header-lower .outer-box:before{
   position: absolute;
   content: '';
-  background: #e11e2f;
+  background: #1f913e;
   width: 5000px;
   height: 100%;
   left: -80px;
