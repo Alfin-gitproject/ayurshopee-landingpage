@@ -7,10 +7,10 @@ export default function BannerSlider() {
     <figure className="banner-image">
       <Link href="/">
         <Image
-          src="/assets/images/banner/img-3.png"
+          src="/assets/images/banner/img-4.jpeg"
           alt="Natural Face Bathing Bar Banner"
           width={1200}
-          height={400}
+          height={700}
           priority
           className="w-full h-auto"
         />

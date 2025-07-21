@@ -6,12 +6,12 @@ import BannerSlider from "@/components/slider/BannerSlider";
 export default function Banner() {
   return (
     <section className="banner-section p_relative">
-      {/* <div
+       {/* <div
         className="pattern-layer wow slideInDown animated"
         data-wow-delay="00ms"
         data-wow-duration="1500ms"
         style={{ backgroundImage: "url(/assets/images/banner/banner-2.jpg)" }}
-      ></div> */}
+      ></div>  */}
       <div className="shape">
         {/* <div
           className="shape-1"
