@@ -108,7 +108,7 @@ Rivertown, Kerala-680001
               <li><Link href="/">Site Map</Link></li>
             </ul> */}
             <div className="copyright">
-              <p>&copy; 2024 All Rights Reserved</p>
+              <p>&copy; 2025 All Rights Reserved</p>
             </div>
           </div>
         </div>
