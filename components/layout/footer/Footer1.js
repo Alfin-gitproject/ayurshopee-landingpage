@@ -18,7 +18,7 @@ export default function Footer1() {
                                 {/* <figure style={{marginLeft:'-20px'}} className="footer-logo"><Link href="/"><img src="assets/images/logo.png" alt="" /></Link></figure> */}
                                 {/* <p>Lorem ipsum dolor sit amet constetur adipiscing elit. Etiam eu turpis mostie dictum est a, mattis tellus.</p> */}
                                 <ul className="social-links clearfix">
-                                    <li><a href="https://www.facebook.com/inherbzwellness"><i className="icon-7"></i></a></li>
+                                    <li><a href=""><i className="icon-7"></i></a></li>
                                     <li><a href=""><i className="icon-4"></i></a></li>
                                     {/* <li><Link href="/"><i className="icon-5"></i></Link></li> */}
                                     {/* <li><Link href="/"><i className="icon-6"></i></Link></li> */}
