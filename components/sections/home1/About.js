@@ -38,7 +38,7 @@ export default function about() {
                   }}
                 ></div> */}
                 <figure className="image">
-                  <img src="assets/images/background/img-2.jpeg" alt="" />
+                  <img src="assets/images/background/img-3.jpeg" alt="" />
                 </figure>
                 {/* <div className="icon-one">
                   <i className="icon-13"></i>
