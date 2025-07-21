@@ -19,7 +19,10 @@ export default function Video() {
                             <span className="border-animation border-3"></span>
           </a>
           </div> */}
-          <h2>Discover Your Natural Glow<br />with Our Bathing Bar</h2>
+          <h2 style={{ color: 'black' }}>  
+  Discover Your Natural Glow<br />  
+  with Our Bathing Bar  
+</h2>
           <div className="btn-box">
             <Link href="/" className="theme-btn btn-one"><span>Order now</span></Link>
           </div>
