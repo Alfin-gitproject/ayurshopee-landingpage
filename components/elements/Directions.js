@@ -5,7 +5,7 @@ export default function Directions() {
   return (
     <div className="content-box">
       <div className="sec-title light d-flex justify-content-center align-items-center">
-        <img className="w-100" src="/assets/images/background/image-1.jpg" alt="Natural Face Bathing Bar" />
+        <img className="w-100" src="/assets/images/background/image-3.jpeg" alt="Natural Face Bathing Bar" />
       </div>
     </div>
   );
