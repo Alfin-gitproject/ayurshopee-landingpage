@@ -13,6 +13,7 @@ import Video from "@/components/sections/home1/Video"
 import Process from "@/components/sections/home1/Process"
 import Faq from "@/components/elements/Faq"
 import Preloader from "@/components/elements/Preloader"
+import VideoCards from "@/components/sections/home1/videocard"
 
 export default function Home() {
 
@@ -28,6 +29,7 @@ export default function Home() {
                 {/* <Funfacts /> */}
                 {/* <Team /> */}
                 <Video />
+                {/* <VideoCards /> */}
                 {/* <Process /> */}
 
                 <Testimonial />

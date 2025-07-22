@@ -45,13 +45,9 @@ export default function Footer1() {
               <div className="widget-content">
                 <ul className="info-list">
                   <li><img src="assets/images/icons/icon-1.png" alt="" />
-                   Green Wellness Solutions
-
-123 Sunshine Lane,
-
-Near Central Park, Springfield (P.O.),
-
-Rivertown, Kerala-680001
+                  Ayurshoppee Enterprises,
+Door No:5/266B, Mangalassery Tower, Kalamassery
+Pincode-683104 Cochin, Kerala,India
                   </li>
                 </ul>
               </div>
@@ -89,7 +85,7 @@ Rivertown, Kerala-680001
                                 </div> */}
                                 <div className="widget-content">
                                     <ul className="info-list">
-                                      <li><i className="icon-2"></i><Link href="tel:+919738105105">+91 7034035102</Link></li> 
+                                      <li><i className="icon-2"></i><Link href="tel:+919738105105">+91 7510411202</Link></li> 
                                     </ul>
                                 </div>
                             </div>

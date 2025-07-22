@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckToSlot } from "@fortawesome/free-solid-svg-icons";
@@ -13,9 +12,7 @@ export default function feature() {
                 <div className="icon-box d-flex justify-content-center">
                   <FontAwesomeIcon width={40} icon={faCheckToSlot} />
                 </div>
-                <h3>
-                  <Link href="/">Effective Whitening Ingredients </Link>
-                </h3>
+                <h3>Effective Whitening Ingredients</h3>
                 <p>
                   Formulated with Kojic Acid and Glutathione, this soap works to
                   lighten hyperpigmentation and dark spots, promoting a more
@@ -32,9 +29,7 @@ export default function feature() {
                 <div className="icon-box d-flex justify-content-center">
                   <FontAwesomeIcon width={40} icon={faCheckToSlot} />
                 </div>
-                <h3>
-                  <Link href="/">Tanning and Dark Spot Removal</Link>
-                </h3>
+                <h3>Tanning and Dark Spot Removal</h3>
                 <p>
                   Designed specifically for body tan removal and dark spot
                   treatment, this soap helps users achieve a brighter complexion
@@ -50,9 +45,7 @@ export default function feature() {
                 <div className="icon-box d-flex justify-content-center">
                   <FontAwesomeIcon width={40} icon={faCheckToSlot} />
                 </div>
-                <h3>
-                  <Link href="/">Gentle on the Skin</Link>
-                </h3>
+                <h3>Gentle on the Skin</h3>
                 <p>
                   Suitable for both men and women, this soap is gentle enough
                   for daily use. It cleanses without stripping the skin of its
@@ -67,9 +60,7 @@ export default function feature() {
                 <div className="icon-box d-flex justify-content-center">
                   <FontAwesomeIcon width={40} icon={faCheckToSlot} />
                 </div>
-                <h3>
-                  <Link href="/">Promotes Glowing Skin</Link>
-                </h3>
+                <h3>Promotes Glowing Skin</h3>
                 <p>
                   Regular use can lead to noticeably brighter and more radiant
                   skin. Users often report a more luminous complexion and

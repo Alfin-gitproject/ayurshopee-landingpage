@@ -76,7 +76,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                             <div className="top-inner">
                                 <ul className="info-list clearfix">
                                     <li>
-                                        <i className="icon-2"></i>Phone: <Link href="tel:+919738105105">+91 7034035102</Link>
+                                        <i className="icon-2"></i>Phone: <Link href="tel:+919738105105">+91 7510411202</Link>
                                     </li>
                                     <li>
                                         <i className="icon-2"></i>Email: <a href="mailto:info@ayurshoppee.com">info@ayurshoppee.com</a>
@@ -99,7 +99,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                     </div>
                     {/* Header Upper */}
                     <div className="header-lower ">
-                        <div className="outer-container py-3">
+                        <div className="outer-container py-2">
                             <div className="auto-container">
                                 <div className="outer-box py-2">
                                     <div className="logo-box">
@@ -128,7 +128,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                                             </Link>
                                             )}
                                             {!isCheckoutRoute && (
-                                            <Link href="/" className="theme-btn btn-two mobile-hide">
+                                            <Link href="/checkout" className="theme-btn btn-two mobile-hide">
                                                 <span>Order now</span>
                                             </Link>
                                             )}

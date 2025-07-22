@@ -63,8 +63,8 @@ export default function Banner() {
               </div> */}
             </div>
           </div>
-          <div className="col-lg-6 col-md-12 col-sm-12 image-column">
-            <div className="image-box">
+          <div className="col-lg-6 col-md-12 col-sm-12 image-column ">
+            <div className="image-box ">
               <div className="image float-bob-y">
                 <BannerSlider />
               </div>
