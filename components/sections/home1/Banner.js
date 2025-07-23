@@ -43,7 +43,7 @@ export default function Banner() {
                 MY FACE <span>NATURAL FACE</span> BATHING BAR
               </h2>
 
-              <h4 className="mb-0">Minute Self Facial Bar</h4>
+              <h4 className="mb-0">Self Facial Bar</h4>
               <p className="mb-0">
                 The My Face 1 Min Self Facial Bar is a comprehensive botanical
                 formulation designed for skincare.

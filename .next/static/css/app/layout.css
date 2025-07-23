@@ -33544,13 +33544,13 @@ a .theme-btn .btn-two{
 
 .main-header .header-lower .outer-box{
   position: relative;
-  background: #1f913e;
+  background:#1a6d31;
 }
 
 .main-header .header-lower .outer-box:before{
   position: absolute;
   content: '';
-  background: #1f913e;
+  background:#1a6d31;
   width: 5000px;
   height: 100%;
   left: -80px;

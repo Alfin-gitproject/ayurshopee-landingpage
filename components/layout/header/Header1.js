@@ -104,13 +104,13 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                                 <div className="outer-box py-2">
                                     <div className="logo-box">
                                         <figure className="logo">
-                                            {/* <Link href="/">
+                                             <Link href="/">
                                                 <img 
-                                                    src="/assets/images/logo.png" 
+                                                    src="/assets/images/black.png" 
                                                     alt="Logo" 
                                                     style={{ width: '100%', height: 'auto' }} 
                                                 />
-                                            </Link> */}
+                                            </Link> 
                                         </figure>
                                     </div>
                                     <>
