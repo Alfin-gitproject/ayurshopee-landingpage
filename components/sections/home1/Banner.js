@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { nextArt } from "@/lib/font";
 import BannerSlider from "@/components/slider/BannerSlider";
 
@@ -38,11 +39,23 @@ export default function Banner() {
                 Unleash the Lasting Freshness of Nature
               </span>
               <h2
-                style={{ fontFamily: `${nextArt.style.fontFamily} !important` }}
+                style={{ 
+                  fontFamily: `${nextArt.style.fontFamily} !important`,
+                  marginBottom: '0.25rem' // Reduced margin below h2
+                }}
               >
                 MY FACE <span>NATURAL FACE</span> BATHING BAR
               </h2>
-
+ <div className="my-1" style={{ width: '100%', height: 'auto' }}>
+                <Image
+                  src="/assets/images/shape/shape13.png" // Update with your image path
+                  alt="My Face Product"
+                  width={100}  // Adjust as needed
+                  height={100} // Adjust as needed
+                  className="img-fluid"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+              </div>
               <h4 className="mb-0">Self Facial Bar</h4>
               <p className="mb-0">
                 The My Face 1 Min Self Facial Bar is a comprehensive botanical
