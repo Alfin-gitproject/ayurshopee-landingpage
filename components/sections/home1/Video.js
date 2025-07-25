@@ -12,7 +12,7 @@ export default function Video() {
       <div className="auto-container">
         <div className="inner-box">
           <div className="shape" style={{ backgroundImage: 'url(assets/images/shape/shape-17.png)' }}></div>
-         <div className="video-btn">
+         {/* <div className="video-btn">
   <a 
     onClick={() => setOpen(true)}
     className="bg-green-500 hover:bg-green-600 transition-colors duration-300"
@@ -22,7 +22,7 @@ export default function Video() {
     <span className="border-animation border-2"></span>
     <span className="border-animation border-3"></span>
   </a>
-</div>
+</div> */}
           <h2 style={{ color: 'black' }}>  
   Discover Your Natural Glow<br />  
   with Our Bathing Bar  
