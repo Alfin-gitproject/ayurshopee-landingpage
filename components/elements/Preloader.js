@@ -2,9 +2,9 @@ export default function Preloader() {
     return (
         <>
             <div className="loader-wrap ">
-            <div class="loader-container">
-                <div class="spinner-border text-danger" role="status">
-                    <span class="visually-hidden">Loading...</span>
+            <div className="loader-container">
+                <div className="spinner-border text-danger" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
             </div>
