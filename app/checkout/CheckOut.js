@@ -38,7 +38,7 @@ export default function CheckOut({ quantity, onQuantityChange }) {
             <div className="row no-gutters">
                 <div className="col-md-4" style={{ display:'flex',position: 'relative', paddingRight:0}}>
                 <img
-                    src="/assets/images/gallery/gallery-12.jpeg"
+                    src="/assets/images/gallery/gallery-12.jpg"
                     alt="product image"
                     style={{objectFit:'cover',borderRadius:'unset'}}
                     className="card-img w-100 h-auto"
