@@ -50,8 +50,8 @@ export default function Banner() {
                 <Image
                   src="/assets/images/shape/shape13.png" // Update with your image path
                   alt="My Face Product"
-                  width={100}  // Adjust as needed
-                  height={100} // Adjust as needed
+                  width={200}  // Adjust as needed
+                  height={200} // Adjust as needed
                   className="img-fluid"
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
