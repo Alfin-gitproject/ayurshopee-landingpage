@@ -1,4 +1,4 @@
-// File: E:\stamen-inherbz-main\app\page.js
+// File: D:\ayurshopee-landingpage-main\app\page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
