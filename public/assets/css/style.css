@@ -2831,7 +2831,9 @@ button.ltr {
   box-shadow: none !important; 
 }
 
-
+.yt-lite{
+  border-radius: 15px !important;
+} 
 
 
 
