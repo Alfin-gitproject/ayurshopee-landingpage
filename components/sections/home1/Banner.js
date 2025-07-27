@@ -42,6 +42,7 @@ export default function Banner() {
               >
                 MY FACE <span>NATURAL FACE</span> BATHING BAR
               </h2>
+              <img src="/assets/images/gallery/slo.png" width="200px" alt="Banner Image" />
 
               <h4 className="mb-0">Self Facial Bar</h4>
               <p className="mb-0">
