@@ -102,7 +102,7 @@ const ShippingPolicy = () => {
                 <p className="text-gray-700">
                   For shipping inquiries:<br />
                   Email: <Link href="mailto:info@ayurshoppee.com" className="text-blue-600 hover:underline">info@ayurshoppee.com</Link><br />
-                  Phone: <Link href="tel:+911234567890" className="text-blue-600 hover:underline">+91 7510411202</Link><br />
+                  Phone: <Link href="tel:+917510411202" className="text-blue-600 hover:underline">+91 7510411202</Link><br />
                   Address: Ayurshoppee Enterprises, Door No:5/266B, Mangalassery Tower, Kalamassery Pincode-683104 Cochin, Kerala,India
                 </p>
               </section>
