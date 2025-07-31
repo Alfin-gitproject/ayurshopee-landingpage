@@ -127,8 +127,8 @@ const GoogleRegister = ({ closeModal }) => {
               onClick={handleGoogleSignIn} 
               disabled={isLoading}
               style={{
-                backgroundColor: '#db4437',
-                borderColor: '#db4437',
+                backgroundColor: '#1a6d31',
+                borderColor: '#1a6d31',
                 padding: '12px 20px',
                 fontSize: '16px'
               }}
@@ -146,11 +146,11 @@ const GoogleRegister = ({ closeModal }) => {
             </button>
           </div>
           
-          <div className="text-center text-muted">
+          {/* <div className="text-center text-muted">
             <small>
               By signing in, you agree to our terms of service and privacy policy.
             </small>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

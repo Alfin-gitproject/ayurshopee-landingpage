@@ -177,7 +177,34 @@ const handleQuantityChange = (newQuantity) => {
   useEffect(() => {
     console.log('ph');
   }, [phoneNumber]);
+const handlePayOnline = async () => {
+  // Ideally, create an order on your backend and get order_id and amount
+  // For demo, we'll use a hardcoded amount and no order_id
+  const amount = quantity * 10000; // e.g. ₹100 x quantity, amount in paise
 
+  const options = {
+    key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Your Razorpay key
+    amount: amount,
+    currency: "INR",
+    name: "Ayurshopee",
+    description: "Order Payment",
+    // order_id: "order_DBJOWzybf0sJbb", // Get this from your backend if you use Razorpay Orders API
+    handler: function (response) {
+      Swal.fire("Payment Success", "Payment ID: " + response.razorpay_payment_id, "success");
+      // Optionally, call handleCreateOrder() here to place the order after payment
+    },
+    prefill: {
+      name: userName,
+      email: shippingInfo?.email,
+      contact: shippingInfo?.phone,
+    },
+    theme: {
+      color: "#1a6d31",
+    },
+  };
+  const rzp = new window.Razorpay(options);
+  rzp.open();
+};
   const renderStepContent = () => {
     switch (currentStep) {
       case 1:
@@ -206,10 +233,21 @@ const handleQuantityChange = (newQuantity) => {
                     {isCheckingAuth ? 'Processing...' : 'Pay On Delivery'}
                   </span>
                 </button>
+                <button 
+            onClick={handlePayOnline} 
+            disabled={isCheckingAuth} 
+            className='theme-btn btn-two'
+          >
+            <span>
+              {isCheckingAuth ? 'Processing...' : 'Pay Online'}
+            </span>
+          </button>
               </div>
             </div>
+            
           </div>
         );
+        
       default:
         return null;
     }
@@ -219,7 +257,7 @@ const handleQuantityChange = (newQuantity) => {
     <>
       <Layout headerStyle={1} footerStyle={1} path={'checkout'}>
         <div className={styles.stepperWrapper}>
-          <div className={styles.steps}>
+      <div className={`${styles.steps} py-4 gap-4`}>
             <button
               className={`${styles.step} ${currentStep === 1 ? styles.active : ''}`}
               onClick={() => handleStepChange(1)}

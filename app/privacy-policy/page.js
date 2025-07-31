@@ -6,13 +6,13 @@ const PrivacyPolicy = () => {
   return (
     <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Privacy Policy">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
-        <h1 className="text-3xl font-bold text-center mb-8">Privacy Policy</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 py-4">Privacy Policy</h1>
         
         <div className="prose prose-lg">
      
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
+            <h2 className="text-2xl font-semibold mb-4 py-3">1. Introduction</h2>
             <p>
               At AYURSHOPPEE, we respect your privacy and are committed to protecting your personal data. 
               This privacy policy explains how we collect, use, and safeguard your information when you visit our 
@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">2. Information We Collect</h2>
+            <h2 className="text-2xl font-semibold mb-4 py-3">2. Information We Collect</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Personal Information:</strong> Name, email, shipping address when you place an order</li>
               <li><strong>Payment Information:</strong> Processed securely through our payment processor (we don't store credit card details)</li>
@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
+            <h2 className="text-2xl font-semibold mb-4 py-3">3. How We Use Your Information</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>Process and fulfill your orders</li>
               <li>Provide customer support</li>
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">4. Data Security</h2>
+            <h2 className="text-2xl font-semibold mb-4 py-3">4. Data Security</h2>
             <p>
               We implement industry-standard security measures including SSL encryption and secure payment processing. 
               However, no internet transmission is 100% secure, so we cannot guarantee absolute security.
@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">5. Third-Party Services</h2>
+            <h2 className="text-2xl font-semibold mb-4 py-3">5. Third-Party Services</h2>
             <p>
               We may use trusted third parties for:
             </p>
@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">6. Your Rights</h2>
+            <h2 className="text-2xl font-semibold mb-4 py-3">6. Your Rights</h2>
             <p>
               You may request to:
             </p>
@@ -86,15 +86,15 @@ const PrivacyPolicy = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">7. Changes to This Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4 py-3">7. Changes to This Policy</h2>
             <p>
               We may update this policy periodically. The latest version will always be posted here with the updated date.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">8. Contact Us</h2>
-            <p>
+            <h2 className="text-2xl font-semibold mb-4 py-3">8. Contact Us</h2>
+            <p >
               For privacy-related questions, contact us at:<br />
               Email: <Link href="mailto:info@ayurshoppee.com" className="text-blue-600">info@ayurshoppee.com</Link><br />
               Mailing Address:Ayurshoppee Enterprises, Door No:5/266B, Mangalassery Tower, Kalamassery Pincode-683104 Cochin, Kerala,India

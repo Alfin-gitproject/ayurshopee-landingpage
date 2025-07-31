@@ -11,10 +11,10 @@ export default function transformUserDataToOrderSchema(localStorageData, userId,
       user: userId, 
       orderItems: [
         {
-          name: 'Ayurvedic Health Product', // Fixed: provide actual product name
+          name: 'My face natural bathing bar', // Fixed: provide actual product name
           quantity: quantity || 1,
           image: `${process.env.NEXT_PUBLIC_URL}/assets/images/banner/banner-img-1.png`,
-          price: '500',
+          price: '555',
           product: 'ayur_product_001' // Fixed: provide actual product ID
         }
       ],
@@ -23,10 +23,10 @@ export default function transformUserDataToOrderSchema(localStorageData, userId,
         id: '', // Optional for COD
         status: '' // Optional for COD
       },
-      itemsPrice: 500,
+      itemsPrice: 555,
       taxAmount: 0, // You might want to calculate this
       shippingAmount: 0, // You might want to add shipping costs
-      totalAmount: 500,
+      totalAmount: 555,
       orderStatus: 'Processing'
     };
   }

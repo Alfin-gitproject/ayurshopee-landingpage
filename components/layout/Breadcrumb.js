@@ -13,7 +13,7 @@ export default function Breadcrumb({ breadcrumbTitle }) {
                     <div className="pattern-4 float-bob-y" style={{ backgroundImage: 'url(assets/images/shape/shape-16.png)' }}></div>
                 </div>
                 <div className="auto-container">
-                    <div className="content-box">
+                    <div className="content-box py-4">
                         <h1>{breadcrumbTitle}</h1>
                         <ul className="bread-crumb clearfix">
                             <li><Link href="/">Home</Link></li>
