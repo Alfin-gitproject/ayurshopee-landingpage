@@ -1,9 +1,5 @@
 {
   "/page": "app/page.js",
-  "/privacy-policy/page": "app/privacy-policy/page.js",
-  "/return-policy/page": "app/return-policy/page.js",
-  "/checkout/page": "app/checkout/page.js",
-  "/orders/page": "app/orders/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/orders/[id]/page": "app/orders/[id]/page.js"
+  "/checkout/page": "app/checkout/page.js"
 }

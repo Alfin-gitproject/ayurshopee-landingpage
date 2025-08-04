@@ -13,6 +13,9 @@ import transformUserDataToOrderSchema from '@/utils/transFormOrderData';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
 
+
+
+
 export default function Home() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,6 +31,7 @@ export default function Home() {
 const handleQuantityChange = (newQuantity) => {
     setQuantity(newQuantity);
 };
+
 
   // Check if user is authenticated
   const checkAuthentication = async () => {
@@ -134,6 +138,148 @@ const handleQuantityChange = (newQuantity) => {
     }
   };
 
+  // Load Razorpay script dynamically
+  const loadRazorpay = () => {
+    return new Promise((resolve) => {
+      if (window.Razorpay) {
+        resolve(true);
+        return;
+      }
+
+     const script = document.createElement('script');
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      script.onload = () => {
+        // Initialize Razorpay after script loads
+        window.Razorpay = window.Razorpay || {};
+        resolve(true);
+      };
+      script.onerror = () => resolve(false);
+      document.body.appendChild(script);
+    });
+  };
+
+    // Handle Razorpay payment
+const handleRazorpayPayment = async () => {
+    setIsPaymentProcessing(true);
+    
+    try {
+      const shippingData = localStorage.getItem('shippingInfo');
+      if (!shippingData) {
+        showAlert('Error', 'Shipping information not found.', 'error');
+        return;
+      }
+
+      const parsedShippingData = JSON.parse(shippingData);
+      const orderData = transformUserDataToOrderSchema(parsedShippingData, null, quantity);
+      
+      // Create order in database
+      const orderResponse = await createOrder(orderData);
+      
+      if (!orderResponse._id) {
+        throw new Error('Failed to create order');
+      }
+ // Create Razorpay order
+      const razorpayResponse = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/create-razorpay-order`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount: orderData.totalAmount * 100,
+          currency: 'INR',
+          receipt: orderResponse._id,
+        }),
+        credentials: 'include',
+      });
+
+      const razorpayOrder = await razorpayResponse.json();
+      
+      if (!razorpayOrder.id) {
+        throw new Error('Failed to create Razorpay order');
+      }
+        // Load Razorpay
+      const razorpayLoaded = await loadRazorpay();
+      if (!razorpayLoaded) {
+        throw new Error('Razorpay SDK failed to load');
+      }
+
+      // Razorpay options
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+        amount: razorpayOrder.amount,
+        currency: razorpayOrder.currency,
+        name: 'ayurshopee',
+        description: `Order #${orderResponse._id}`,
+        image: '/logo.png',
+        order_id: razorpayOrder.id,
+        handler: async function(response) {
+          try {
+            // Payment verification logic remains the same
+            const verificationResponse = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/verify-payment`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                razorpayOrderId: razorpayOrder.id,
+                razorpayPaymentId: response.razorpay_payment_id,
+                razorpaySignature: response.razorpay_signature,
+                orderId: orderResponse._id,
+              }),
+              credentials: 'include',
+            });
+
+            const verificationResult = await verificationResponse.json();
+            
+            if (verificationResult.success) {
+              // Success handling remains the same
+            } else {
+              throw new Error('Payment verification failed');
+            }
+          } catch (error) {
+            console.error('Verification error:', error);
+            // Error handling remains the same
+          }
+        },
+        prefill: {
+          name: parsedShippingData.name,
+          email: parsedShippingData.email,
+          contact: parsedShippingData.phone,
+        },
+        notes: {
+          address: `${parsedShippingData.address}, ${parsedShippingData.selectedCity}, ${parsedShippingData.selectedState} - ${parsedShippingData.postalCode}`,
+          orderId: orderResponse._id,
+        },
+        theme: {
+          color: '#3399cc',
+        },
+      };
+
+
+           const rzp = new window.Razorpay(options);
+      rzp.open();
+      
+  rzp.on('payment.failed', function(response) {
+        Swal.fire({
+          title: 'Payment Failed',
+          text: response.error.description || 'Payment could not be processed',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
+      });
+
+    } catch (error) {
+      console.error('Payment error:', error);
+      Swal.fire({
+        title: 'Payment Error',
+        text: error.message || 'There was an issue processing your payment',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+    } finally {
+      setIsPaymentProcessing(false);
+    }
+  };
   const handleNext = async () => {
     if (currentStep === 3) {
       const shippingData = localStorage.getItem('shippingInfo');
@@ -177,34 +323,7 @@ const handleQuantityChange = (newQuantity) => {
   useEffect(() => {
     console.log('ph');
   }, [phoneNumber]);
-const handlePayOnline = async () => {
-  // Ideally, create an order on your backend and get order_id and amount
-  // For demo, we'll use a hardcoded amount and no order_id
-  const amount = quantity * 10000; // e.g. ₹100 x quantity, amount in paise
 
-  const options = {
-    key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // Your Razorpay key
-    amount: amount,
-    currency: "INR",
-    name: "Ayurshopee",
-    description: "Order Payment",
-    // order_id: "order_DBJOWzybf0sJbb", // Get this from your backend if you use Razorpay Orders API
-    handler: function (response) {
-      Swal.fire("Payment Success", "Payment ID: " + response.razorpay_payment_id, "success");
-      // Optionally, call handleCreateOrder() here to place the order after payment
-    },
-    prefill: {
-      name: userName,
-      email: shippingInfo?.email,
-      contact: shippingInfo?.phone,
-    },
-    theme: {
-      color: "#1a6d31",
-    },
-  };
-  const rzp = new window.Razorpay(options);
-  rzp.open();
-};
   const renderStepContent = () => {
     switch (currentStep) {
       case 1:
@@ -221,30 +340,30 @@ const handlePayOnline = async () => {
             <Shipping handleNextShipping={handleNext} />
           </div>
         );
-      case 3:
+       case 3:
         return (
           <div>
-            <h2 className='text-white'>Check Out Session</h2>
-            <div>
-            <CheckOut quantity={quantity} onQuantityChange={handleQuantityChange} />
-              <div className='w-100 d-flex justify-content-start' style={{ marginBottom: '15px' }}>
-                <button onClick={handleNext} disabled={isCheckingAuth} className='theme-btn btn-one'>
-                  <span>
-                    {isCheckingAuth ? 'Processing...' : 'Pay On Delivery'}
-                  </span>
-                </button>
-                <button 
-            onClick={handlePayOnline} 
-            disabled={isCheckingAuth} 
-            className='theme-btn btn-two'
-          >
-            <span>
-              {isCheckingAuth ? 'Processing...' : 'Pay Online'}
-            </span>
-          </button>
-              </div>
+            <h2 className='text-white'>Check Out</h2>
+            <CheckOut 
+              quantity={quantity} 
+              onQuantityChange={handleQuantityChange} 
+            />
+            <div className="d-flex gap-3" style={{ marginBottom: '15px' }}>
+  <button 
+    onClick={handleNext} 
+    disabled={isCheckingAuth} 
+    className="theme-btn btn-one"
+  >
+    <span>{isCheckingAuth ? 'Processing...' : 'Pay On Delivery'}</span>
+  </button>
+              {/* <button 
+                onClick={handleRazorpayPayment} 
+                disabled={isCheckingAuth || isPaymentProcessing} 
+                className={styles.payOnline}
+              >
+                {isPaymentProcessing ? 'Processing Payment...' : 'Pay Online'}
+              </button> */}
             </div>
-            
           </div>
         );
         

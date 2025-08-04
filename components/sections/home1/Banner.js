@@ -45,6 +45,11 @@ export default function Banner() {
               <img src="/assets/images/gallery/slo.png" width="200px" alt="Banner Image" />
 
               <h4 className="mb-0">Self Facial Bar</h4>
+              <div className="price-display mb-3">
+                <span className="price-tag" style={{ fontSize: '24px', fontWeight: 'bold', color: 'black' }}>
+                  ₹555
+                </span>
+              </div>
               <p className="mb-0">
                 The My Face 1 Min Self Facial Bar is a comprehensive botanical
                 formulation designed for skincare.
@@ -57,11 +62,11 @@ export default function Banner() {
                 your skin's vitality. This My Face Bar delicately exfoliates
                 while promoting accelerated cell regeneration.
               </p>
-              {/* <div className="btn-box">
-                <Link href="/checkout" className="theme-btn btn-two">
-                  <span>Order now</span>
+               <div className="btn-box">
+                <Link href="/checkout" className="theme-btn btn-two" style={{ backgroundColor: '#28a745', borderColor: '#28a745', color: 'white !important' }}>
+                  <span style={{ color: 'white !important' }}>Order now</span>
                 </Link>
-              </div> */}
+              </div> 
             </div>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12 image-column ">
