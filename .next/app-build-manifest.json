@@ -22,37 +22,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/checkout/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/checkout/page.css",
-      "static/chunks/app/checkout/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
-    ],
     "/orders/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/orders/page.js"
     ],
-    "/orders/[id]/page": [
+    "/checkout/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/orders/[id]/page.js"
-    ],
-    "/privacy-policy/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/privacy-policy/page.js"
-    ],
-    "/order-success/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/order-success/page.css",
-      "static/chunks/app/order-success/page.js"
+      "static/css/app/checkout/page.css",
+      "static/chunks/app/checkout/page.js"
     ]
   }
 }
