@@ -83,6 +83,7 @@ export default function Footer1() {
             <div className="bottom-inner">
               <div className="footer-nav-container">
                 <ul className="footer-nav">
+                  <li><Link href="/contact">Contact Us</Link></li>
                   <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                   <li><Link href="/terms-conditions">Terms & Conditions</Link></li>
                   <li><Link href="/shipping-policy">Shipping Policy</Link></li>
